@@ -11,6 +11,7 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
         if (expense.id === action.id) {
           return { ...expense, ...action.updates };
         }
+        return expense;
       });
     default:
       return state;
